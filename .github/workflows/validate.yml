@@ -1,0 +1,29 @@
+name: Registry validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  registry:
+    name: Validate registry
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: proposal
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          path: trusted
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test trusted validator
+        run: node --test trusted/scripts/validate.test.mjs
+      - name: Validate proposed metadata using trusted tools
+        run: node trusted/scripts/validate.mjs proposal/extensions.json trusted/extensions.json

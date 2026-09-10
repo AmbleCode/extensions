@@ -1,0 +1,21 @@
+{
+  "id": "example.example-extension",
+  "name": "Example extension",
+  "summary": "Replace this example with a truthful description of your extension.",
+  "author": "Example author",
+  "repository": "https://github.com/example/example-extension",
+  "commit": "1111111111111111111111111111111111111111",
+  "directory": ".",
+  "version": "0.1.0",
+  "license": { "id": "MIT", "path": "LICENSE" },
+  "compatibility": {
+    "testedLyreVersions": ["0.1.1"],
+    "platforms": ["windows"],
+    "evidence": "docs/lyre-compatibility.md"
+  },
+  "permissions": ["Replace with a complete description of host access and data destinations."],
+  "installation": "INSTALL.md",
+  "security": "SECURITY.md",
+  "screenshots": ["images/preview.png"],
+  "status": "listed"
+}
