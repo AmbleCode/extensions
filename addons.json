@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "revision": 2,
+  "addons": [
+    {
+      "id": "lyre-design",
+      "category": "addon",
+      "name": "Lyre Design",
+      "version": "0.1.0",
+      "license": "MIT",
+      "summary": "Turn a brief into an editable HTML design in a workspace panel while your Lyre agents edit the same artifacts.",
+      "reason": "Download published as the stable lyre-design-v0.1.0 release with a ZIP and checksum. Installed-host acceptance passed on an isolated 0.1.10 daemon for install, runtime and all twelve design tools. Browser panel, sidebar screen, preview rendering and installed-desktop checks remain pending.",
+      "requirements": [
+        "Requires foundation >=0.11.2 and Lyre >=0.1.9 <0.3.0 or the specific 0.2.0-test prerelease. Agent tools require a host advertising Lyre extension tools.",
+        "Owner access to the selected host is required to install, enable and use it. The sandboxed live preview runs in Lyre desktop or a browser; phones show an availability state instead."
+      ],
+      "setup": [
+        "When a qualified package is published, verify its checksum, extract it into a permanent folder on the host computer and install through Settings > Add-ons (Settings > Plugins on Lyre 0.1.10). Review the source first: add-ons run trusted code.",
+        "Enable it, then open Design from the sidebar (or Lyre Design from workspace panels, or Open Lyre Design in Command Center), choose a workspace, and start from a template or ask an agent to create a design with get_design_guide.",
+        "Your workspace agents discover the design tools on their own. Panel edits and agent edits share one revision history, so Undo works for both. Download the HTML from the panel and print that file when a PDF is needed."
+      ],
+      "agentOperations": [
+        {
+          "method": "list_design_artifacts",
+          "title": "List design artifacts",
+          "description": "Read the snapshot revision, artifact metadata and undo availability for this workspace."
+        },
+        {
+          "method": "read_design_artifact",
+          "title": "Read a design artifact",
+          "description": "Read one artifact's stored HTML and metadata."
+        },
+        {
+          "method": "create_design_artifact",
+          "title": "Create a design artifact",
+          "description": "Create one self-contained HTML design from a brief."
+        },
+        {
+          "method": "update_design_artifact",
+          "title": "Update a design artifact",
+          "description": "Replace an artifact's HTML with the complete new document."
+        },
+        {
+          "method": "rename_design_artifact",
+          "title": "Rename a design artifact",
+          "description": "Change an artifact's display title."
+        },
+        {
+          "method": "delete_design_artifact",
+          "title": "Delete a design artifact",
+          "description": "Remove an artifact from the workspace."
+        },
+        {
+          "method": "undo_design_edit",
+          "title": "Undo the last design change",
+          "description": "Step back one change in the history shared with the panel."
+        },
+        {
+          "method": "redo_design_edit",
+          "title": "Redo the next design change",
+          "description": "Step forward one undone change in the shared history."
+        },
+        {
+          "method": "get_design_guide",
+          "title": "Read the Lyre Design guide",
+          "description": "Read the authoring rules and workflow before editing an artifact."
+        },
+        {
+          "method": "import_design_markup",
+          "title": "Import artifact markup",
+          "description": "Import `<artifact>` blocks or one HTML document from another design tool."
+        },
+        {
+          "method": "list_design_presets",
+          "title": "List design presets",
+          "description": "List bundled design systems and design skills."
+        },
+        {
+          "method": "get_design_preset",
+          "title": "Read a design preset",
+          "description": "Read one design system or skill and reuse its tokens."
+        }
+      ],
+      "artifact": {
+        "url": "https://github.com/LyreStudio/lyre-releases/releases/download/lyre-design-v0.1.0/lyre-design-0.1.0.zip",
+        "checksums": "https://github.com/LyreStudio/lyre-releases/releases/download/lyre-design-v0.1.0/SHA256SUMS-lyre-design.txt",
+        "sha256": "e1169f7f82b84d7394544287027f34c05f4e2acf5fa55c1bca7c84a83d4ce524",
+        "size": 1063872
+      }
+    }
+  ]
+}
