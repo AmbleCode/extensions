@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
+  "revision": 3,
   "addons": [
     {
       "id": "lyre-design",
@@ -84,8 +84,8 @@
       "artifact": {
         "url": "https://github.com/LyreStudio/lyre-releases/releases/download/lyre-design-v0.1.0/lyre-design-0.1.0.zip",
         "checksums": "https://github.com/LyreStudio/lyre-releases/releases/download/lyre-design-v0.1.0/SHA256SUMS-lyre-design.txt",
-        "sha256": "e1169f7f82b84d7394544287027f34c05f4e2acf5fa55c1bca7c84a83d4ce524",
-        "size": 1063872
+        "sha256": "5ce0804d58ed9d02245bbf4f503e71c17df3a987fe9d437f80b862cf88da61ea",
+        "size": 1070850
       }
     }
   ]
