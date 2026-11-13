@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
+  "revision": 4,
   "addons": [
     {
       "id": "lyre-design",
@@ -86,6 +86,30 @@
         "checksums": "https://github.com/LyreStudio/lyre-releases/releases/download/lyre-design-v0.1.0/SHA256SUMS-lyre-design.txt",
         "sha256": "5ce0804d58ed9d02245bbf4f503e71c17df3a987fe9d437f80b862cf88da61ea",
         "size": 1070850
+      }
+    },
+    {
+      "id": "craft-anything",
+      "category": "addon",
+      "name": "Amble Craft Anything",
+      "version": "0.1.0",
+      "license": "MIT",
+      "summary": "Study how a website, app or game works with real inspection tools, then let your connected Amble agent build your own version.",
+      "reason": "Wraps Craft Anything (MIT OR Apache-2.0, early alpha) pinned to a checksum-verified release. Windows x64 install and MCP initialize were exercised; macOS, Linux and the end-to-end agent flow in a running Amble host are not verified. No packaged add-on download is published yet.",
+      "requirements": [
+        "Requires foundation >=0.11.2. Agent tools require a host advertising Amble extension tools.",
+        "Owner access to the selected host is required to install, enable and use it. Use it only on software you own or may examine."
+      ],
+      "setup": [
+        "When a package is published, verify its checksum, extract it into a permanent folder on the host computer and install through Settings > Add-ons. Review the source first: add-ons run trusted code.",
+        "Open the Amble Craft Anything panel and choose Install; it downloads the pinned Craft Anything release, checks its SHA-256 and unpacks it. Nothing downloads until you press the button.",
+        "Pick a connected agent, a kind, a target and a request. The agent studies the target in clean-room mode and builds with your own provider permissions."
+      ],
+      "artifact": {
+        "url": "https://github.com/LyreStudio/lyre-releases/releases/download/craft-anything-v0.1.0/craft-anything-0.1.0.zip",
+        "checksums": "https://github.com/LyreStudio/lyre-releases/releases/download/craft-anything-v0.1.0/SHA256SUMS-craft-anything.txt",
+        "sha256": "b427747f9f37305d928f1c4d858e4ea5423fc18278b92be6129dc9a081f259ed",
+        "size": 38051
       }
     }
   ]
